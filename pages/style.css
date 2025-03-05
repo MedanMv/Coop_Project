@@ -42,7 +42,6 @@ button {
     font-size: 16px;
 }
 
-/* Прозрачные светящиеся кнопки */
 .glow-button {
     background: transparent;
     border: 2px solid white;
@@ -59,13 +58,11 @@ button {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Анимация свечения */
 .glow-button:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 1);
     color: #fff;
 }
 
-/* Эффект света внутри кнопки */
 .glow-button::before {
     content: "";
     position: absolute;
@@ -176,12 +173,12 @@ ul li {
     position: relative;
 }
 
-/* Новый стиль кнопки удаления (увеличенный размер, прямоугольник, текст "Удалить") */
+
 .delete-btn {
     position: absolute;
     right: 5px;
     top: 5px;
-    width: 80px; /* Увеличенная ширина */
+    width: 80px; 
     height: 30px;
     background: red;
     border-radius: 5px;
