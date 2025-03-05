@@ -241,33 +241,5 @@ section {
     font-size: 20px;
 }
 
-/* Темная тема */
 
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-mode header {
-    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1b1b3a);
-}
-
-.dark-mode aside {
-    background-color: #1e1e1e;
-}
-
-.dark-mode ul li {
-    background-color: #2a2a2a;
-    color: #e0e0e0;
-}
-
-.dark-mode button {
-    background-color: #333;
-    color: #e0e0e0;
-}
-
-.dark-mode .modal-content {
-    background-color: #222;
-    color: #e0e0e0;
-}
 
