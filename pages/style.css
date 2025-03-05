@@ -82,17 +82,6 @@ button {
 }
 
 
-#join-class {
-    font-size: 20px;
-    font-weight: bold;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    margin-top: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 #register-btn {
     padding: 15px 25px;
@@ -101,9 +90,6 @@ button {
     transition: 0.3s ease;
 }
 
-#join-class:hover {
-    background: #0000FF;
-}
 
 #add-class:hover {
     background: #0000FF;
@@ -237,6 +223,5 @@ section {
     float: right;
     font-size: 20px;
 }
-
 
 
