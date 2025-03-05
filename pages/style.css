@@ -1,1 +1,273 @@
 
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+@keyframes animatedBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    font-family: 'ARIAL BLACK';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(-45deg, #0033cc, #0066ff, #0099ff, #33ccff);
+    background-size: 300% 300%;
+    animation: animatedBackground 5s infinite linear;
+    color: white;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: #03dac6;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Прозрачные светящиеся кнопки */
+.glow-button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Анимация свечения */
+.glow-button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    color: #fff;
+}
+
+/* Эффект света внутри кнопки */
+.glow-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+}
+
+.glow-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+
+#join-class {
+    font-size: 20px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#register-btn {
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#join-class:hover {
+    background: #0000FF;
+}
+
+#add-class:hover {
+    background: #0000FF;
+}
+
+#add-class{
+    background: transparent;
+    border: 2px solid #5F9EA0;
+    color: #5F9EA0;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+#register-btn:hover {
+    background: #0000FF;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 250px;
+    background: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-class {
+    font-size: 20px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+button:hover {
+    background: #00bfa5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Новый стиль кнопки удаления (увеличенный размер, прямоугольник, текст "Удалить") */
+.delete-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 80px; /* Увеличенная ширина */
+    height: 30px;
+    background: red;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+
+ul li.right-clicked .delete-btn {
+    display: block;
+}
+
+section {
+    flex: 1;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.modal input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.close {
+    cursor: pointer;
+    color: red;
+    float: right;
+    font-size: 20px;
+}
+
+/* Темная тема */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1b1b3a);
+}
+
+.dark-mode aside {
+    background-color: #1e1e1e;
+}
+
+.dark-mode ul li {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .modal-content {
+    background-color: #222;
+    color: #e0e0e0;
+}
+
