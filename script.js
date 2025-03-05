@@ -70,27 +70,3 @@ function clearClassInterface() {
     content.removeAttribute('data-current-class');
     content.innerHTML = '<p>Выберите класс или создайте новый.</p>';
 }
-
-// Создаем кнопку для переключения темы
-let themeToggleBtn = document.createElement('button');
-themeToggleBtn.textContent = '🌙';
-themeToggleBtn.id = 'theme-toggle';
-document.body.appendChild(themeToggleBtn);
-
-// Стили кнопки (можно добавить в CSS)
-themeToggleBtn.style.position = 'fixed';
-themeToggleBtn.style.top = '630px';
-themeToggleBtn.style.right = '20px';
-themeToggleBtn.style.background = '#333';
-themeToggleBtn.style.color = '#fff';
-themeToggleBtn.style.border = 'none';
-themeToggleBtn.style.padding = '11px';
-themeToggleBtn.style.cursor = 'pointer';
-themeToggleBtn.style.borderRadius = '5px';
-
-// Функция для переключения темы
-themeToggleBtn.addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-    themeToggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-});
-
