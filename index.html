@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom</title>
+    <link rel="stylesheet" href="styles.css">
 
+</head>
+<body>
+    <header>
+        <h1>CLASSROOM</h1>
+        <div class="header-buttons">
+            <button id="join-class"  class="glow-button">+</button>
+            <button id="register-btn" class="glow-button">Регистрация</button>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <button id="add-class" class="glow-button">+</button>
+            <ul id="class-list"></ul>
+        </aside>
+        <section id="content">
+            <p>Выберите класс или создайте новый.</p>
+        </section>
+    </main>
+
+    <!-- Модальное окно для входа -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <input type="text" placeholder="Логин">
+            <input type="password" placeholder="Пароль">
+            <button>Войти</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для присоединения к классу -->
+    <div id="join-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Присоединиться к классу</h2>
+            <input type="text" id="class-code" placeholder="Введите код класса">
+            <button id="join-class-btn">Присоединиться</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
