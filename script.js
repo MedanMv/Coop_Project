@@ -115,8 +115,7 @@ function createClass(className) {
         let li = document.createElement('li');
         li.textContent = className;
         li.setAttribute('data-class', className);
-        li.style.border = '2px solid #00FFFF';
-        li.style.boxShadow = '0 0 2px #00FFFF';
+        li.style.border = '2px solid #808080';
         
         let deleteBtn = document.createElement('span');
         deleteBtn.classList.add('delete-btn');
